@@ -37,3 +37,18 @@ title: Alchemy - Section 1
 Try using this SHA-256 online tool. Can you prove to yourself each one of these properties?
 
 - [HASH TOOL](https://emn178.github.io/online-tools/sha256)
+
+
+# Public Key Cryptography
+
+## Cryptography Historically
+  - Up until the 1970's cryptography was mainly used to secure messages as it is being sent from source to destination. It was highly used with the military to ensure messages couldn't be compromised by enemy forces, evev if message would be intercepted, the interceptor wouldn't be able to decode the message
+    - *The message was passed through a function that would run an algorithm on the message. It could be as easy as moving letters around to where ABC would be bca, or cba. Hacking it wasn't impossible, but difficult, unless you were able to get your hands on the **secret** *
+  - Later down the line **secret key** was introduced. If two parties were to meet and agree on a secret key, this secret key was also passed along with the function, and then to decrypt the message, they would need the secret key and the secret of the function
+    - Having keys on both sides of the message is known as **symmetric-key cryptography**
+  - As time progress, and technology advanced, people started having PC's and wanted to communicate to each other securely without worrying about anyone eavesdroppers. This would require them to meet up in-person and share a secret-key and then communicate. However, that become very weird as time progress
+  - As time progressed <u>Whitfield Diffie</u> came up with a concept of public/private keys: 
+    1. Asymmetric versus symmetric, meaning it should not be used for unidirectional encryption because the public key is known to the world, it's more of a value when the message needs to be sent back to the sender, only if the sender has the private key would it work, as the public key is assinged to the private key.
+    2. Diffle was unable to accomplish this task mathematical, so he teamed up with <u>Martin Hellman</u> and <u>Ralph Merkle</u> to implement said system
+    3. RSA and ECDSA are very common public key algorithms for public key cryptography
+
